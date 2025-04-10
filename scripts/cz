@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+cz() {
+  dir="$1"
+  layout_filename="layout.kdl"
+  layout_path="$dir/$layout_filename"
+
+  if [[ -f "$dir/$layout_filename" ]]; then
+    zellij --layout "$dir/$layout_filename"
+  else
+    cd "$dir"
+  fi  
+}

@@ -1,0 +1,15 @@
+# https://moonrepo.dev/docs/config/workspace
+$schema: './cache/schemas/workspace.json'
+
+# extends: './shared/workspace.yml'
+
+projects:
+  - 'miniokube'
+  - 'orders'
+  - 'scratch'
+  - 'scripts'
+
+vcs:
+  manager: 'git'
+  provider: 'github'
+  defaultBranch: 'main'
