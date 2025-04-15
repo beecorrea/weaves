@@ -1,3 +1,3 @@
-module github.com/beecorrea/{{ mod }}
+module github.com/beecorrea/weaves{{ mod }}
 
 go 1.24.0
