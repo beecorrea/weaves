@@ -1,3 +1,8 @@
 tasks:
-  test:
+  test-all:
     command: 'go test ./...'
+  main:
+    command:
+      - 'go'
+      - 'run'
+      - 'cmd/main/main.go'
