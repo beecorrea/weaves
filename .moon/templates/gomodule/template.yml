@@ -1,0 +1,17 @@
+# https://moonrepo.dev/docs/config/template
+$schema: '../../.moon/cache/schemas/template.json'
+
+id: gomodule
+title: 'Golang Module Template'
+description: 'Description of the template.'
+destination: '/[mod]'
+variables:
+  mod:
+    type: 'string'
+    required: true
+    prompt: 'Module name?'
+  description:
+    type: 'string'
+    required: true
+    default: ""
+    prompt: Description?

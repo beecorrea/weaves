@@ -12,3 +12,7 @@ vcs:
   manager: 'git'
   provider: 'github'
   defaultBranch: 'main'
+
+generator:
+  templates:
+    - './.moon/templates'
