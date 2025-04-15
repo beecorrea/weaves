@@ -28,6 +28,11 @@ func (w *Weave) GetHackDir() (os.DirEntry, error) {
 	return nil, &ErrNoHackDir{project: w.Project}
 }
 
+// Returns all Hacks for a given Weave.
+//
+// If this the Hacks are loaded in memory by a previous call to this function,
+// it'll return that value. Otherwise, it calls filepath.Walkdir using the
+// Weave's hack directory as the root.
 func (w *Weave) Hacks() ([]*Hack, error) {
 	if w.hacks != nil {
 		return w.hacks, nil
