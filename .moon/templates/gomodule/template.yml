@@ -7,10 +7,12 @@ description: 'Description of the template.'
 destination: '/[mod]'
 variables:
   mod:
+    order: 1
     type: 'string'
     required: true
     prompt: 'Module name?'
   description:
+    order: 2
     type: 'string'
     required: true
     default: ""
