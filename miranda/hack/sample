@@ -1,3 +1,4 @@
 #!/bin/bash
 
 echo "This is a sample hack script"
+sleep 1
