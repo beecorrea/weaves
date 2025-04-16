@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/beecorrea/weaves/darlene"
-	"github.com/beecorrea/weaves/miranda/pkg/hackrun"
+	"github.com/beecorrea/weaves/outfits/hackrun"
 	tea "github.com/charmbracelet/bubbletea"
 )
 

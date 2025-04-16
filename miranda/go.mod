@@ -4,12 +4,13 @@ go 1.24.0
 
 require (
 	github.com/beecorrea/weaves/darlene v0.0.0-00010101000000-000000000000
-	github.com/beecorrea/weaves/sun v0.0.0-20250416001255-7701ccddf404
+	github.com/beecorrea/weaves/outfits/hackrun v0.0.0-00010101000000-000000000000
 	github.com/charmbracelet/bubbletea v1.3.4
 )
 
 require (
 	github.com/atotto/clipboard v0.1.4 // indirect
+	github.com/beecorrea/weaves/sun v0.0.0-20250416181744-ff17eab20920 // indirect
 	github.com/charmbracelet/colorprofile v0.2.3-0.20250311203215-f60798e515dc // indirect
 	github.com/charmbracelet/x/cellbuf v0.0.13-0.20250311204145-2c3ea96c31dd // indirect
 	github.com/sahilm/fuzzy v0.1.1 // indirect
@@ -18,8 +19,8 @@ require (
 
 require (
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
-	github.com/charmbracelet/bubbles v0.21.0
-	github.com/charmbracelet/lipgloss v1.1.0
+	github.com/charmbracelet/bubbles v0.21.0 // indirect
+	github.com/charmbracelet/lipgloss v1.1.0 // indirect
 	github.com/charmbracelet/x/ansi v0.8.0 // indirect
 	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
@@ -36,6 +37,6 @@ require (
 	golang.org/x/text v0.24.0 // indirect
 )
 
-replace github.com/beecorrea/weaves/sun => ../sun
+replace github.com/beecorrea/weaves/outfits/hackrun => ../outfits/hackrun
 
 replace github.com/beecorrea/weaves/darlene => ../darlene
