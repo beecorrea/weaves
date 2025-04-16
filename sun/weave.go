@@ -57,6 +57,7 @@ func (w *Weave) Hacks() ([]*Hack, error) {
 
 		if info.Mode().IsRegular() {
 			h := &Hack{Name: entry.Name(), Path: path}
+			h.runtime = h.Runtime()
 			hacks = append(hacks, h)
 		}
 		return nil
