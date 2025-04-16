@@ -7,6 +7,7 @@ projects:
   - 'scratch'
   - 'scripts'
   - 'miranda'
+  - 'darlene'
 
 vcs:
   manager: 'git'

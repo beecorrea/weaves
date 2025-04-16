@@ -1,0 +1,5 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+project:
+  name: "darlene"
+  description: "Hack scripts runner"
+  
