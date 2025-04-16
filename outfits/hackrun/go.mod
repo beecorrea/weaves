@@ -3,7 +3,10 @@ module github.com/beecorrea/weaves/outfits/hackrun
 go 1.24.0
 
 replace github.com/beecorrea/weaves/sun => ../../sun
+replace github.com/beecorrea/weaves/darlene => ../../darlene
+
 require (
+	github.com/beecorrea/weaves/darlene v0.0.0-20250416184127-ffbf2d50931a
 	github.com/beecorrea/weaves/sun v0.0.0-20250416181744-ff17eab20920
 	github.com/charmbracelet/bubbles v0.21.0
 	github.com/charmbracelet/bubbletea v1.3.4
@@ -32,5 +35,3 @@ require (
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.3.8 // indirect
 )
-
-
