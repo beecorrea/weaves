@@ -9,6 +9,7 @@ projects:
   - 'miranda'
   - 'darlene'
   - 'outfits'
+  - 'shiva'
   
 vcs:
   manager: 'git'
