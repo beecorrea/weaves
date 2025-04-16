@@ -19,9 +19,9 @@ func (w *Weave) GetHackDir() (os.DirEntry, error) {
 		return nil, err
 	}
 
-	for _, dir := range entries {
-		if dir.Type().IsDir() && IsHack(dir.Name()) {
-			return dir, nil
+	for _, e := range entries {
+		if e.Type().IsDir() && IsHack(e.Name()) {
+			return e, nil
 		}
 	}
 
@@ -43,13 +43,8 @@ func (w *Weave) Hacks() ([]*Hack, error) {
 		panic(err)
 	}
 
-	dirFullPath, err := filepath.Abs(hackDir.Name())
-	if err != nil {
-		panic(err)
-	}
-
 	var hacks []*Hack
-
+	dirFullPath := fmt.Sprintf("%s/%s", w.Root(), hackDir.Name())
 	filepath.WalkDir(dirFullPath, func(path string, entry fs.DirEntry, err error) error {
 		if err != nil {
 			panic(err)
@@ -67,6 +62,7 @@ func (w *Weave) Hacks() ([]*Hack, error) {
 		return nil
 	})
 
+	w.hacks = hacks
 	return hacks, nil
 }
 
@@ -81,7 +77,12 @@ func WeavesHome() string {
 	return home
 }
 
-// Returns all files and directories under a Project.
+// Returns the root of the Weave
+func (w *Weave) Root() string {
+	return fmt.Sprintf("%s/%s", WeavesHome(), w.Project)
+}
+
+// Returns all files and directories under a Weave.
 func (w *Weave) Files() ([]os.DirEntry, error) {
 	projectRoot := fmt.Sprintf("%s/%s", WeavesHome(), w.Project)
 	return os.ReadDir(projectRoot)
