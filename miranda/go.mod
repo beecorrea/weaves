@@ -3,7 +3,8 @@ module github.com/beecorrea/weaves/miranda
 go 1.24.0
 
 require (
-	github.com/beecorrea/weaves/sun v0.0.0-20250415194544-b99dd0202060
+	github.com/beecorrea/weaves/darlene v0.0.0-00010101000000-000000000000
+	github.com/beecorrea/weaves/sun v0.0.0-20250416001255-7701ccddf404
 	github.com/charmbracelet/bubbletea v1.3.4
 )
 
@@ -35,4 +36,6 @@ require (
 	golang.org/x/text v0.24.0 // indirect
 )
 
-replace github.com/beecorrea/weaves/sun v0.0.0-20250415194544-b99dd0202060 => ../sun
+replace github.com/beecorrea/weaves/sun => ../sun
+
+replace github.com/beecorrea/weaves/darlene => ../darlene

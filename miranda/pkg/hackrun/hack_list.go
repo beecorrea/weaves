@@ -1,4 +1,4 @@
-package hackerrun
+package hackrun
 
 import (
 	"fmt"
@@ -18,7 +18,7 @@ var (
 
 // List styling
 var (
-	listHeight        = 8
+	listHeight        = 10
 	defaultWidth      = len(title) * 2
 	titleStyle        = lipgloss.NewStyle().MarginLeft(2)
 	itemStyle         = lipgloss.NewStyle().PaddingLeft(4)

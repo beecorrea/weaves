@@ -1,4 +1,4 @@
-package hackerrun
+package hackrun
 
 import (
 	"github.com/beecorrea/weaves/sun"
@@ -7,15 +7,14 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
-// Model for a Hackerrun instance
-type Hackerrun struct {
-	Weaves   []*sun.Weave
+// Model for a HackRun instance
+type HackRun struct {
 	List     list.Model
 	Cursor   int
 	Selected *sun.Hack
 }
 
-func InitModel(project string) Hackerrun {
+func InitModel(project string) HackRun {
 	w := &sun.Weave{Project: project}
 	hacks, err := w.Hacks()
 	if err != nil {
@@ -23,8 +22,7 @@ func InitModel(project string) Hackerrun {
 	}
 	l := NewHackList(hacks)
 
-	hr := Hackerrun{
-		Weaves:   []*sun.Weave{w},
+	hr := HackRun{
 		List:     l,
 		Cursor:   0,
 		Selected: nil,
@@ -33,11 +31,11 @@ func InitModel(project string) Hackerrun {
 	return hr
 }
 
-func (hr Hackerrun) Init() tea.Cmd {
+func (hr HackRun) Init() tea.Cmd {
 	return nil
 }
 
-func (hr Hackerrun) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (hr HackRun) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch {
@@ -45,12 +43,8 @@ func (hr Hackerrun) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return hr, tea.Quit
 		// Choose a Hack and quit to main
 		case key.Matches(msg, DefaultKeyMap.Select):
-			item := hr.List.SelectedItem().(Item)
-			h := sun.Hack(item)
-			hr.Selected = &h
-			return hr, tea.Quit
+			return hr.Select()
 		}
-
 	}
 
 	var cmd tea.Cmd
@@ -58,6 +52,13 @@ func (hr Hackerrun) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return hr, cmd
 }
 
-func (hr Hackerrun) View() string {
+func (hr HackRun) View() string {
 	return hr.List.View()
+}
+
+func (hr HackRun) Select() (HackRun, tea.Cmd) {
+	item := hr.List.SelectedItem().(Item)
+	h := sun.Hack(item)
+	hr.Selected = &h
+	return hr, tea.Quit
 }

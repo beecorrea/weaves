@@ -1,4 +1,4 @@
-package hackerrun
+package hackrun
 
 import (
 	"github.com/charmbracelet/bubbles/key"
