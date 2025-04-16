@@ -2,14 +2,15 @@
 $schema: './cache/schemas/workspace.json'
 
 projects:
+  - 'sun'
+  - 'darlene'
+  - 'miranda'
+  - 'outfits'
+  - 'shiva'
   - 'miniokube'
   - 'orders'
   - 'scratch'
-  - 'scripts'
-  - 'miranda'
-  - 'darlene'
-  - 'outfits'
-  - 'shiva'
+  
   
 vcs:
   manager: 'git'
