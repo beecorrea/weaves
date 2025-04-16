@@ -1,5 +1,5 @@
 $schema: 'https://moonrepo.dev/schemas/project.json'
 project:
-  name: "{{ mod }}"
-  description: "{{ description }}"
+  name: "orders"
+  description: "Study repo for Order Theory"
 language: go

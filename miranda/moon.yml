@@ -1,7 +1,5 @@
 $schema: 'https://moonrepo.dev/schemas/project.json'
 project:
   name: "miranda"
-  description: "A TUI for Weaves"
-
-
-  
+  description: "CLI for Weaves"
+language: go

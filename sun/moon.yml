@@ -1,5 +1,5 @@
 $schema: 'https://moonrepo.dev/schemas/project.json'
 project:
   name: "sun"
-  description: "Control plane API for weaves"
-  
+  description: "Control Plane API for weaves"
+language: go
